@@ -2,7 +2,7 @@
 
 $products = ['Nike', 'Adidas', 'Puma', 'Reebok'];
 
-function set_product(&$data, $nama) {
+function add_product(&$data, $nama) {
    array_push($data, $nama);
 }
 
@@ -13,5 +13,5 @@ function get_products($data)
    }
 }
 
-set_product($products, 'Airwalk');
+add_product($products, 'Airwalk');
 get_products($products);
