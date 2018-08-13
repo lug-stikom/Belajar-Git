@@ -1,12 +1,17 @@
 <?php
 
-function getProducts()
-{
-    $products = ['Nike', 'Adidas', 'Puma', 'Reebok'];
+$products = ['Nike', 'Adidas', 'Puma', 'Reebok'];
 
-    foreach ($products as $product) {
-        echo $product . ' ';
-    }
+function set_product(&$data, $nama) {
+   array_push($data, $nama);
 }
 
-getProducts();
+function get_products($data)
+{
+   foreach ($data as $product) {
+       echo $product . ' ';
+   }
+}
+
+set_product($products, 'Airwalk');
+get_products($products);
